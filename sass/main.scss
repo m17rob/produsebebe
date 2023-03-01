@@ -1,68 +1,93 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: gobold;
+  src: url(/fonts/goboldregular.otf) format('opentype');
+}
+
+body {
+  background: linear-gradient(135deg, #a7dcf0 0%, #2685f0 100%);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
 .container {
-    padding: 2rem;
-    display: grid; 
-    grid-template-columns: 300px minmax(500px, 1fr); 
-    gap: 30px ; 
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 300px minmax(500px, 1fr);
+  gap: 30px;
+  grid-template-areas:
+    'logo info'
+    '. produse';
+
+  @media screen and (max-width: 910px) {
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "logo info"
-      ". produse"; 
-
-    @media screen and (max-width: 910px){
-        grid-template-columns: 1fr; 
-        grid-template-areas:
-        "logo"
-        "info"
-        "produse"; 
-    }
+      'logo'
+      'info'
+      'produse';
+  }
 }
-.logo {  
-grid-area: logo;
-background-color: burlywood;
-height: 100px;
+.logo {
+  grid-area: logo;
+  background-color: burlywood;
+  height: 100px;
 }
-.meniu { 
-position: -webkit-sticky;
-position: sticky;
-top: 10%;
-background-color: lightsalmon;
-height: 500px;
+.meniu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10%;
+  background-color: lightsalmon;
+  height: 500px;
 
-    @media screen and (max-width: 910px){
-        position: fixed;
-        top: 50%;
-        left: 0;
-        height: 100px;
-        width: 50px;
-    }
+  @media screen and (max-width: 910px) {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    height: 100px;
+    width: 50px;
+  }
 }
 
 .info {
-    grid-area: info;
+  grid-area: info;
 }
 
-.info--inner { 
-background-color: sandybrown;
-height: 100px;
+.info--inner {
+  background-color: sandybrown;
+  height: 100px;
 }
 
 .produse {
-    grid-area: produse;
-    display: flex;
-    justify-content: center;
+  grid-area: produse;
+  display: flex;
+  justify-content: center;
 }
 
-.produse--inner{ 
-padding: 20px;
-display: flex;
-flex-wrap: wrap;
-max-width: 1370px;
-background-color: coral;
-justify-content: center;
-gap: 40px;
+.produse--inner {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1370px;
+  background-color: coral;
+  justify-content: center;
+  gap: 60px;
 }
 
 .card {
-    height: 400px;
-    width: 300px;
-    background-color: brown;
+  height: 390px;
+  width: 280px;
+  // background-color: brown;
+  border: 3px solid #fff;
+  border-radius: 20px;
 }
