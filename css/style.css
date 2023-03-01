@@ -7,6 +7,7 @@
   padding: 0; }
 
 html {
+  height: 100%;
   font-size: 62.5%; }
 
 @font-face {
@@ -64,7 +65,7 @@ body {
   padding: 35px 20px 35px 20px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1370px;
+  max-width: 1920px;
   background-color: coral;
   justify-content: center;
   gap: 60px;
