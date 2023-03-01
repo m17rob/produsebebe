@@ -29,7 +29,8 @@ body {
   gap: 30px;
   grid-template-areas:
     'logo info'
-    '. produse';
+    '. produse'
+    ". control";
 
   @media screen and (max-width: 910px) {
     grid-template-columns: 1fr;
@@ -48,8 +49,11 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 10%;
-  background-color: lightsalmon;
-  height: 500px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 5rem;
+  padding: 5rem 5rem 5rem 0; 
+  height: fit-content;
 
   @media screen and (max-width: 910px) {
     position: fixed;
@@ -57,6 +61,14 @@ body {
     left: 0;
     height: 100px;
     width: 50px;
+  }
+
+  &__categorie {
+    font-size: 2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    margin: .5rem;
   }
 }
 
@@ -136,4 +148,14 @@ body {
     position: absolute;
     bottom: -3.5rem;
   }
+}
+
+.control {
+  grid-area: control;
+  height: 5rem;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
