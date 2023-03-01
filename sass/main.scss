@@ -48,29 +48,34 @@ body {
 }
 .meniu {
   position: -webkit-sticky;
-  position: sticky;
-  top: 10%;
+  position: fixed;
+  top: 20%;
+  left: 0;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
-  border-radius: 5rem;
-  padding: 5rem 5rem 5rem 0; 
+  border-radius: 0 3rem 3rem 0;
+  padding: 4rem 4rem 4rem 1rem;  
   height: fit-content;
+  z-index: 2;
 
-  @media screen and (max-width: 910px) {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    height: 100px;
-    width: 50px;
-  }
+  // @media screen and (max-width: 910px) {
+    
+  // }
 
-  &__categorie {
+  &__categorie{
+    cursor: pointer;
     font-size: 2rem;
-    background-color: #fff;
     border-radius: 1rem;
     padding: 1rem 2rem;
-    margin: .5rem;
-  }
+    margin: 1rem;
+    color: #6c8596;
+  } 
+} 
+
+.active {
+  background-color: #fff;
+  color: #224E69;
+  filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.15));
 }
 
 .info {
