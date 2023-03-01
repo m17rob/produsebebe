@@ -3,8 +3,8 @@
   display: grid;
   grid-template-columns: 300px minmax(500px, 1fr);
   grid-auto-rows: auto;
-  gap: 30px 10vw;
-  grid-template-areas: "logo info" ". produse"; }
+  gap: 30px;
+  grid-template-areas: "logo info" "meniu produse"; }
 
 .logo {
   grid-area: logo;
@@ -12,18 +12,23 @@
   height: 100px; }
 
 .meniu {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10%;
+  grid-area: meniu;
   background-color: lightsalmon;
   height: 500px; }
 
 .info {
-  grid-area: info; }
+  grid-area: info;
+  display: flex;
+  justify-content: center; }
+
+#map {
+  height: 300px;
+  width: 800px; }
 
 .info--inner {
   background-color: sandybrown;
-  height: 100px; }
+  height: 300px;
+  width: 800px; }
 
 .produse {
   grid-area: produse;
@@ -33,10 +38,10 @@
 .produse--inner {
   padding: 20px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 1370px;
   background-color: coral;
-  justify-content: center;
   gap: 40px; }
 
 .card {

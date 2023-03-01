@@ -6,7 +6,7 @@
     gap: 30px ; 
     grid-template-areas:
       "logo info"
-      ". produse"; 
+      "meniu produse"; 
 }
 .logo {  
 grid-area: logo;
@@ -14,21 +14,28 @@ background-color: burlywood;
 height: 100px;
 }
 .meniu { 
-// grid-area: meniu; 
-position: -webkit-sticky;
-position: sticky;
-top: 10%;
+grid-area: meniu; 
+// position: -webkit-sticky;
+// position: sticky;
+// top: 10%;
 background-color: lightsalmon;
 height: 500px;
 }
 
 .info {
     grid-area: info;
+    display: flex;
+justify-content: center;
 }
+
+#map { 
+height: 300px;
+width: 800px; }
 
 .info--inner { 
 background-color: sandybrown;
-height: 100px;
+height: 300px;
+width: 800px;
 }
 
 .produse {
@@ -40,10 +47,10 @@ height: 100px;
 .produse--inner{ 
 padding: 20px;
 display: flex;
+justify-content: center;
 flex-wrap: wrap;
 max-width: 1370px;
 background-color: coral;
-justify-content: center;
 gap: 40px;
 }
 
