@@ -1,0 +1,38 @@
+.container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 300px minmax(500px, 1370px);
+  grid-auto-rows: auto;
+  gap: 30px 10vw;
+  grid-template-areas: "logo info" ". produse"; }
+
+.logo {
+  grid-area: logo;
+  background-color: burlywood;
+  height: 100px; }
+
+.meniu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10%;
+  background-color: lightsalmon;
+  height: 500px; }
+
+.info {
+  grid-area: info;
+  background-color: sandybrown;
+  height: 100px; }
+
+.produse {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: produse;
+  background-color: coral;
+  justify-content: center;
+  gap: 40px; }
+
+.card {
+  height: 400px;
+  width: 300px;
+  background-color: brown; }
