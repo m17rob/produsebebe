@@ -2,11 +2,18 @@
     padding: 2rem;
     display: grid; 
     grid-template-columns: 300px minmax(500px, 1fr); 
-    grid-auto-rows: auto; 
     gap: 30px ; 
     grid-template-areas:
       "logo info"
-      "meniu produse"; 
+      ". produse"; 
+
+    @media screen and (max-width: 910px){
+        grid-template-columns: 1fr; 
+        grid-template-areas:
+        "logo"
+        "info"
+        "produse"; 
+    }
 }
 .logo {  
 grid-area: logo;
@@ -14,28 +21,28 @@ background-color: burlywood;
 height: 100px;
 }
 .meniu { 
-grid-area: meniu; 
-// position: -webkit-sticky;
-// position: sticky;
-// top: 10%;
+position: -webkit-sticky;
+position: sticky;
+top: 10%;
 background-color: lightsalmon;
 height: 500px;
+
+    @media screen and (max-width: 910px){
+        position: fixed;
+        top: 50%;
+        left: 0;
+        height: 100px;
+        width: 50px;
+    }
 }
 
 .info {
     grid-area: info;
-    display: flex;
-justify-content: center;
 }
-
-#map { 
-height: 300px;
-width: 800px; }
 
 .info--inner { 
 background-color: sandybrown;
-height: 300px;
-width: 800px;
+height: 100px;
 }
 
 .produse {
@@ -47,10 +54,10 @@ width: 800px;
 .produse--inner{ 
 padding: 20px;
 display: flex;
-justify-content: center;
 flex-wrap: wrap;
 max-width: 1370px;
 background-color: coral;
+justify-content: center;
 gap: 40px;
 }
 
