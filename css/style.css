@@ -63,6 +63,9 @@ body {
     top: 45%;
     right: -15%;
     cursor: pointer; }
+    @media screen and (max-width: 910px) {
+      .meniu__btn {
+        height: 6rem; } }
   .meniu__categorie {
     cursor: pointer;
     font-size: 2rem;

@@ -78,6 +78,10 @@ body {
     top: 45%;
     right: -15%;
     cursor: pointer;
+  
+    @media screen and (max-width: 910px) {
+      height: 6rem;
+     }
   }
 
   &__categorie {
