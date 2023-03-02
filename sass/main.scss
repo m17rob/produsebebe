@@ -60,9 +60,27 @@ body {
   z-index: 2;
   transition: all 0.3s;
 
-  // @media screen and (max-width: 910px) {
+  @media screen and (max-height: 800px) {
+    top: 5%;
+   }
 
-  // }
+   @media screen and (max-height: 600px) {
+    top: 0;
+    height: 100%;
+    border-radius: 0;
+   }
+
+
+  &__btn {
+    position: absolute;
+    top: 45%;
+    right: -15%;
+    cursor: pointer;
+
+    @media screen and (max-height: 600px) {
+      top: 40%;
+     }
+  }
 
   &__categorie {
     cursor: pointer;
@@ -71,11 +89,17 @@ body {
     padding: 1rem 2rem;
     margin: 1rem;
     color: #6c8596;
+    transition: all .3s;
+
+    @media screen and (max-width: 910px) {
+      font-size: 1.5rem; 
+      margin: .5rem;
+     }
   }
 }
 
 .closed {
-  transform: translateX(-100%);
+  transform: translateX(-80%);
 }
 
 .active {
