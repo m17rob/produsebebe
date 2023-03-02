@@ -28,5 +28,11 @@ menuCategorii.forEach(function(btn){
             link.classList.remove("active")
         });
         this.classList.add('active');
+        if(window.innerWidth < 910){
+            setTimeout(() => {
+                menu.classList.add('closed');
+                menuBtn.setAttribute('src', '/img/meniu-close.png')
+            }, 500);
+        }
     })
 })
