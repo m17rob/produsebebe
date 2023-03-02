@@ -87,15 +87,15 @@ body {
     color: #6c8596;
     transition: all .3s;
 
-    @media screen and (max-width: 910px) {
-      font-size: 1.5rem; 
-      margin: .5rem;
-     }
+    // @media screen and (max-width: 910px) {
+    //   font-size: 1.5rem; 
+    //   margin: .5rem;
+    //  }
   }
 }
 
 .closed {
-  transform: translateX(-80%);
+  transform: translateX(-100%);
 }
 
 .active {
