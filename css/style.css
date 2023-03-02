@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *::before,
 *::after {
   box-sizing: border-box; }
@@ -28,8 +29,9 @@ body {
   grid-template-areas: 'logo info' '. produse' '. control'; }
   @media screen and (max-width: 910px) {
     .container {
+      align-items: center;
       grid-template-columns: 1fr;
-      grid-template-areas: 'logo' 'info' 'produse'; } }
+      grid-template-areas: 'logo' 'info' 'produse' 'control'; } }
 
 .logo {
   grid-area: logo;
@@ -77,16 +79,41 @@ body {
   justify-content: center; }
 
 .produse--inner {
-  padding: 35px 20px 35px 20px;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 35px 20px 70px 20px;
   justify-content: center;
-  gap: 60px 130px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.3);
-  min-height: 922px;
   max-width: 1920px;
-  backdrop-filter: blur(10px); }
+  backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* începeți cu două coloane egale */
+  grid-template-rows: repeat(2, 1fr);
+  /* începeți cu două rânduri egale */
+  grid-auto-flow: row;
+  /* specifică că elementele trebuie așezate pe rânduri */
+  grid-gap: 50px;
+  /* adaugi un spațiu între elemente */ }
+  @media screen and (max-width: 1730px) {
+    .produse--inner {
+      grid-template-columns: repeat(3, 1fr);
+      /* modifică numărul de coloane la 1 */
+      grid-template-rows: auto; } }
+  @media screen and (max-width: 1380px) {
+    .produse--inner {
+      grid-template-columns: repeat(2, 1fr);
+      /* modifică numărul de coloane la 1 */
+      grid-template-rows: auto; } }
+  @media screen and (max-width: 1030px) {
+    .produse--inner {
+      grid-template-columns: repeat(1, 1fr);
+      /* modifică numărul de coloane la 1 */
+      grid-template-rows: auto; } }
+  @media screen and (max-width: 768px) {
+    .produse--inner {
+      grid-template-columns: repeat(1, 1fr);
+      /* modifică numărul de coloane la 1 */
+      grid-template-rows: auto; } }
 
 .card {
   height: 390px;
