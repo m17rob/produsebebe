@@ -6,7 +6,7 @@ if(window.innerWidth < 910){
     menuBtn.setAttribute('src', '/img/meniu-close.png')
 }
 
-menu.addEventListener("click", function(){
+menuBtn.addEventListener("click", function(){
     if(menu.classList.contains("closed")){
         menu.classList.remove("closed")
     } else {
