@@ -141,8 +141,25 @@ function afiseazaPagini() {
     pagina.classList.add('btnPag');
     pagina.innerText = i + 1;
     pagina.addEventListener('click', function () {
+      // eliminăm clasa "activă" de la toate butoanele
+      var butoane = containerPagini.getElementsByTagName('button');
+      for (var j = 0; j < butoane.length; j++) {
+        butoane[j].classList.remove('activ');
+      }
+      // adăugăm clasa "activă" butonului apăsat
+      this.classList.add('activ');
+      // mutăm fereastra de vizualizare în partea de sus a paginii cu o animație smooth
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
       afiseazaCarduriPagina(this.innerText - 1);
     });
+
+    // adăugăm clasa "activă" doar butonului inițial
+    if (i == 0) {
+      pagina.classList.add('activ');
+    }
 
     containerPagini.appendChild(pagina);
   }
