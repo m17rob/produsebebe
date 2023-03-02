@@ -50,6 +50,14 @@ body {
   height: fit-content;
   z-index: 2;
   transition: all 0.3s; }
+  @media screen and (max-height: 800px) {
+    .meniu {
+      top: 5%; } }
+  @media screen and (max-height: 600px) {
+    .meniu {
+      top: 0;
+      height: 100%;
+      border-radius: 0; } }
   .meniu__btn {
     position: absolute;
     top: 45%;
@@ -63,6 +71,10 @@ body {
     margin: 1rem;
     color: #6c8596;
     transition: all .3s; }
+    @media screen and (max-width: 910px) {
+      .meniu__categorie {
+        font-size: 1.5rem;
+        margin: .5rem; } }
 
 .closed {
   transform: translateX(-100%); }
