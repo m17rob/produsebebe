@@ -13,11 +13,11 @@ menuBtn.addEventListener("click", function(){
         menu.classList.add('closed');
     }
 
-    if(menu.classList.contains('closed')){
-        menuBtn.setAttribute('src', '/img/meniu-close.png')
-    } else {
-        menuBtn.setAttribute('src', '/img/meniu-open.png')
-    }
+    // if(menu.classList.contains('closed')){
+    //     menuBtn.setAttribute('src', '/img/meniu-close.png')
+    // } else {
+    //     menuBtn.setAttribute('src', '/img/meniu-open.png')
+    // }
 })
 /////////////////////////////////////////////////////////
 const menuCategorii = document.querySelectorAll(".meniu__categorie");
