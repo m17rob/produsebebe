@@ -72,9 +72,7 @@ body {
     border-radius: 0;
    }
 
-   @media screen and (max-width: 910px) {
-    left: -4rem;
-   }
+
 
 
   &__btn {
@@ -107,6 +105,9 @@ body {
 
 .closed {
   transform: translateX(-80%);
+  @media screen and (max-width: 910px) {
+    transform: translateX(-100%);
+   }
 }
 
 .active {
