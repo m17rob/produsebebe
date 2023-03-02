@@ -140,7 +140,7 @@ function afiseazaPagini() {
     var pagina = document.createElement('button');
     pagina.classList.add('btnPag');
     pagina.innerText = i + 1;
-    pagina.addEventListener('click', function () {
+    pagina.addEventListener('pointerdown', function () {
       // eliminăm clasa "activă" de la toate butoanele
       var butoane = containerPagini.getElementsByTagName('button');
       for (var j = 0; j < butoane.length; j++) {
@@ -148,15 +148,7 @@ function afiseazaPagini() {
       }
       // adăugăm clasa "activă" butonului apăsat
       this.classList.add('activ');
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-      });
       afiseazaCarduriPagina(this.innerText - 1);
-    });
-    // adăugăm evenimentul "touchstart" pentru dispozitivele mobile
-    pagina.addEventListener('touchstart', function () {
       // mutăm fereastra de vizualizare în partea de sus a paginii cu o animație smooth
       window.scroll({
         top: 0,
