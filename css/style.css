@@ -77,7 +77,7 @@ body {
         margin: .5rem; } }
 
 .closed {
-  transform: translateX(-100%); }
+  transform: translateX(-80%); }
 
 .active {
   background-color: #fff;
