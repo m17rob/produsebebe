@@ -149,8 +149,9 @@ function afiseazaPagini() {
       // adăugăm clasa "activă" butonului apăsat
       this.classList.add('activ');
       // mutăm fereastra de vizualizare în partea de sus a paginii cu o animație smooth
-      window.scrollTo({
+      window.scroll({
         top: 0,
+        left: 0,
         behavior: 'smooth',
       });
       afiseazaCarduriPagina(this.innerText - 1);
