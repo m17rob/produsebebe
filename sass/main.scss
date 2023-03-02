@@ -60,23 +60,30 @@ body {
   padding: 4rem 4rem 4rem 1rem;
   height: fit-content;
   z-index: 2;
-  transition: all 0.3s;
+  transition: transform 0.3s;
 
-  // @media screen and (max-height: 800px) {
-  //   top: 5%;
-  //  }
+  @media screen and (max-height: 800px) {
+    top: 5%;
+   }
 
-  //  @media screen and (max-height: 600px) {
-  //   top: 0;
-  //   height: 100%;
-  //   border-radius: 0;
-  //  }
+   @media screen and (max-height: 600px) {
+    top: 0;
+    height: 100%;
+    border-radius: 0;
+   }
+
+
 
   &__btn {
     position: absolute;
     top: 45%;
     right: -15%;
     cursor: pointer;
+  
+    @media screen and (max-width: 910px) {
+      right: -35%;
+      height: 6rem;
+     }
   }
 
   &__categorie {
@@ -97,6 +104,9 @@ body {
 
 .closed {
   transform: translateX(-80%);
+  @media screen and (max-width: 910px) {
+    transform: translateX(-100%);
+   }
 }
 
 .active {
